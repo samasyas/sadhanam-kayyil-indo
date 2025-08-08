@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sadhanam Kayyil Undo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      color: white;
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      width: 90%;
+      max-width: 500px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    button {
+      padding: 15px 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      color: white;
+      min-width: 200px;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    button:nth-child(1) {
+      background-color: #2ecc71; /* green */
+    }
+
+    button:nth-child(2) {
+      background-color: #e74c3c; /* red */
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #response-text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #FFD700;
+      margin-top: 20px;
+    }
+
+    #emoji-image img {
+      width: 100px;
+      height: 100px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>SADHANAM KAYYIL UNDO?</h1>
+
+    <div class="buttons">
+      <button onclick="showResponse()">SADHANAM KAYYIL UND</button>
+      <button onclick="showEmoji()">SADHANAM KAYYIL ILLA</button>
+    </div>
+
+    <div id="response-text" class="hidden">IPPO VENDA PINNE MATHY</div>
+
+    <div id="emoji-image" class="hidden">
+      <img src="https://twemoji.maxcdn.com/v/latest/72x72/1f610.png" alt="Neutral Face Emoji">
+    </div>
+  </div>
+
+  <script>
+    function showResponse() {
+      // Show the text and hide the emoji
+      document.getElementById("response-text").classList.remove("hidden");
+      document.getElementById("emoji-image").classList.add("hidden");
+    }
+
+    function showEmoji() {
+      // Show the emoji and hide the text
+      document.getElementById("emoji-image").classList.remove("hidden");
+      document.getElementById("response-text").classList.add("hidden");
+    }
+  </script>
+</body>
+</html>
